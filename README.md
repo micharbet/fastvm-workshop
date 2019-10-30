@@ -1,37 +1,31 @@
-## Welcome to GitHub Pages
+## fast-vm installation
 
-You can use the [editor on GitHub](https://github.com/micharbet/fastvm-workshop/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```shell
+curl -o /etc/yum.repos.d/fast-vm.repo https://copr.fedorainfracloud.org/coprs/ondrejhome/fast-vm/repo/epel-8/ondrejhome-fast-vm-epel-8.repo
+dnf install fast-vm
+configure-fast-vm 
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## adding image
+```shell
+fast-vm import_image centos-7.6 http://ftp.linux.cz/pub/linux/people/ondrej_famera/fastvm-images/generated/6g__centos-7.6.img.xz https://raw.githubusercontent.com/OndrejHome/fast-vm-public-images/master/centos/xml/centos-6.3-current.xml https://raw.githubusercontent.com/OndrejHome/fast-vm-public-images/master/centos/hacks/6g_centos-7-hacks.sh
+fast-vm import_image debian-10.1 http://ftp.linux.cz/pub/linux/people/ondrej_famera/fastvm-images/generated/6g__debian-10.1.img.xz https://raw.githubusercontent.com/OndrejHome/fast-vm-public-images/master/debian/xml/debian-10.xml https://raw.githubusercontent.com/OndrejHome/fast-vm-public-images/master/debian/hacks/debian-10.sh
+fast-vm list_images
+```
 
-### Jekyll Themes
+## create VM and run it
+```
+fast-vm create debian-10.1 20
+fast-vm start 20
+fast-vm console 20
+fast-vm ssh 20
+```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/micharbet/fastvm-workshop/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+fast-vm list
+fast-vm list --all
+fast-vm list_profiles 
+fast-vm create centos-7.6 21
+fast-vm start 21
+fast-vm console 21
+```
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
