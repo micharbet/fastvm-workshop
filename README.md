@@ -1,6 +1,6 @@
 # fast-vm workshop resource
 
-## fast-vm installation
+## 1. installation
 
 - Fedora 30
 ```shell
@@ -37,7 +37,7 @@ vgs
 configure-fast-vm 
 ```
 
-## adding image
+## 2. adding image
 ```shell
 fast-vm import_image centos-7.6 \
  http://ftp.linux.cz/pub/linux/people/ondrej_famera/fastvm-images/generated/6g__centos-7.6.img.xz \
@@ -52,7 +52,7 @@ fast-vm import_image debian-10.1 \
 fast-vm list_images
 ```
 
-## create VM and run it
+## 3. create VM, run and log-in
 ```shell
 fast-vm create debian-10.1 20
 fast-vm start 20
@@ -65,7 +65,7 @@ is also the last octet of IP address. By default 192.168.22.20
 root's password is `testtest`
 
 
-## get information about virtual machines
+## 4. get information about virtual machines
 ```shell
 fast-vm list
 fast-vm list --all
@@ -73,6 +73,14 @@ fast-vm list_profiles
 virsh list --all
 lvs
 ```
+
+## 5. stop & destroy
+```shell
+fast-vm stop 20 graceful
+fast-vm delete 20
+```
+Note: the word graceful gives the guest OS to shut down properly. Without it
+the VM will bu just powered-off.
 
 ## Download
 [slides](fastvm-openalt2019.odp)
