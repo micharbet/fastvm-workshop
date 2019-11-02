@@ -45,18 +45,19 @@
 ```
 
 ## create VM and run it
-```
+```shell
 fast-vm create debian-10.1 20
 fast-vm start 20
 fast-vm console 20
 fast-vm ssh 20
 ```
 
+## get information about virtual machines
+```shell
 fast-vm list
 fast-vm list --all
 fast-vm list_profiles 
-fast-vm create centos-7.6 21
-fast-vm start 21
-fast-vm console 21
+virsh list --all
+lvs
 ```
 
