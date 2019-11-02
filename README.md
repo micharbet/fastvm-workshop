@@ -37,15 +37,15 @@ configure-fast-vm
 
 ## adding image
 ```shell
-fast-vm import_image centos-7.6
- \ http://ftp.linux.cz/pub/linux/people/ondrej_famera/fastvm-images/generated/6g__centos-7.6.img.xz
- \ https://raw.githubusercontent.com/OndrejHome/fast-vm-public-images/master/centos/xml/centos-6.3-current.xml
- \ https://raw.githubusercontent.com/OndrejHome/fast-vm-public-images/master/centos/hacks/6g_centos-7-hacks.sh
+fast-vm import_image centos-7.6 \
+ http://ftp.linux.cz/pub/linux/people/ondrej_famera/fastvm-images/generated/6g__centos-7.6.img.xz \
+ https://raw.githubusercontent.com/OndrejHome/fast-vm-public-images/master/centos/xml/centos-6.3-current.xml \
+ https://raw.githubusercontent.com/OndrejHome/fast-vm-public-images/master/centos/hacks/6g_centos-7-hacks.sh
 
-fast-vm import_image debian-10.1
- \ http://ftp.linux.cz/pub/linux/people/ondrej_famera/fastvm-images/generated/6g__debian-10.1.img.xz
- \ https://raw.githubusercontent.com/OndrejHome/fast-vm-public-images/master/debian/xml/debian-10.xml
- \ https://raw.githubusercontent.com/OndrejHome/fast-vm-public-images/master/debian/hacks/debian-10.sh
+fast-vm import_image debian-10.1 \
+ http://ftp.linux.cz/pub/linux/people/ondrej_famera/fastvm-images/generated/6g__debian-10.1.img.xz \
+ https://raw.githubusercontent.com/OndrejHome/fast-vm-public-images/master/debian/xml/debian-10.xml \
+ https://raw.githubusercontent.com/OndrejHome/fast-vm-public-images/master/debian/hacks/debian-10.sh
 
 fast-vm list_images
 ```
@@ -59,6 +59,7 @@ fast-vm ssh 20
 ```
 Note: the number '20' denotes your new VM, numbers can be between 20 and 220. The number
 is also the last octet of IP address. By default 192.168.22.20
+
 root's password is `testtest`
 
 
