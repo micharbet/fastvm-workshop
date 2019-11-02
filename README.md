@@ -1,7 +1,5 @@
 # fast-vm workshop resource
 
-[presentation](fastvm-openalt2019.odp)
-
 ## fast-vm installation
 
 - Fedora 30
@@ -75,4 +73,7 @@ fast-vm list_profiles
 virsh list --all
 lvs
 ```
+
+## Download
+[slides](fastvm-openalt2019.odp)
 
