@@ -1,3 +1,7 @@
+# fast-vm workshop resource
+
+[presentation](fastvm-openalt2019.odp)
+
 ## fast-vm installation
 
 - Fedora 30
